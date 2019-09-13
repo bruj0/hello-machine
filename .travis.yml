@@ -1,0 +1,14 @@
+language: generic
+dist: xenial
+sudo: required
+script:
+- bash test-hello.sh
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: cDjiNAuxbp9w7BZ/evJ2xkbNb9rvIFlYTznr+7cIo/3feIk1qrhZHIa5gQ3p/I+SayZiXb5XP5242HUuGUntEFnmxIbOs6yohvGLhkRroKl4cPWa+IhSgBHPw0vID+3FRUEq9fVr+HygjiNCwXHAk+GyYJERUTjjhLcE6FCJAW1lhkLniA7u9x5pcpsey2f/epnIAu/IyaNMpDxk6obLZwFyjyBMnIEAIahn3G1elffLUsuI8At/bRBl4io6YZF5PQNBrHKcWE2RwtSxduIviHSjrBP4BlbTTTLnHTNjFpLQ8NGXMH/JUtzXUfVv8KtLrnfxNVvUFa+1YGOYEqJ/GxOuokYhy/2CAsEDtD/JEN95RKIePyQ6tC1fjH1sYJw/be41cZrWCYMOS6yrLxV7xde23u+Bvrran316XQOnaVmhJgdCdWphVuj+A6hrj6U6YqwjUJ7mncZXqADSgohXFJ2zTOiv37I2d/shQMee4M7xNdeJBy1Q9+TXqo2ajpN5VvHuIL6vw38t/Q04DXQdh2JyopN9N2/kWw2rpB9HOM0PSXJC/dh52fDiYhj9ltiBidhxin+DHbRzva09g9S9WTswstfyrUAqJw7H+JpAduTZmaWVw3FyXqGusrHAjiRhSN/BBar5snCdz3HiP8+UJTa5Eli1hH8sZbCL4A7gv1s=
+  file: hello.sh
+  on:
+    repo: bruj0/hello-machine
+    tags: true
